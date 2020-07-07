@@ -98,11 +98,15 @@ spec:
 ### Example builders
 
 Cloud Foundry:
- - `cloudfoundry/cnb:bionic`
- - `cloudfoundry/cnb:cflinuxfs3`
+ - `gcr.io/paketo-buildpacks/builder:base` &rrar; Ubuntu bionic base image with buildpacks for Java, NodeJS and Golang
+ - `gcr.io/paketo-buildpacks/builder:full-cf` &rarr; cflinuxfs3 base image with buildpacks for Java, .NET, NodeJS, Golang, PHP, HTTPD and NGINX
+ - `gcr.io/paketo-buildpacks/builder:tiny` &rarr; Tiny base image (bionic build image, distroless run image) with buildpacks for Golang
 
 Heroku:
- - `heroku/buildpacks:18`
+ - `heroku/buildpacks:18` &rarr; heroku-18 base image with buildpacks for Ruby, Java, Node.js, Python, Golang, & PHP
+
+Google:
+ - `gcr.io/buildpacks/builder:v1` &rarr; Ubuntu 18 base image with buildpacks for .NET, Go, Java, Node.js, and Python
 
 ## Previous Platform API Versions
 
